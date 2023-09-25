@@ -1,33 +1,33 @@
-import memesData from "../memesData"
-
-import { useState } from "react"
+import memesData from "../memesData";
+import { useState } from "react";
 
 function Form() {
-    function getRandomImage() {
-        const memesArray = memesData.data.memes
-        const randomNumber = Math.floor(Math.random() * memesArray.length)
-        return memesArray[randomNumber].url
-    }
+  // Destructure memes data directly
+  const { memes } = memesData.data;
 
-    const [ImageUrl, setImageURL] = useState("")
+  const getRandomImage = () => {
+    const randomNumber = Math.floor(Math.random() * memes.length);
+    return memes[randomNumber].url;
+  };
 
-    function changeImage() {
-        setImageURL(url => getRandomImage())
-    }
-    
+  const [imageUrl, setImageUrl] = useState("/images/troll-face.png");
 
-    return (
-        <div className="Form">
-            <section className="meme-text-input">
-                <input type="text" className="top-text" placeholder="Enter top meme text" />
-                <input type="text" className="bottom-text" placeholder="Enter bottom meme text" />
-            </section>
-            <button className="get-image-button" onClick={changeImage}>
-                Get a new meme image  🖼
-            </button>
-            <img src={ImageUrl} className="meme-image" />
-        </div>
-    )
+  const changeImage = () => {
+    setImageUrl(getRandomImage());
+  };
+
+  return (
+    <div className="Form">
+      <section className="meme-text-input">
+        <input type="text" className="top-text" placeholder="Enter top meme text" />
+        <input type="text" className="bottom-text" placeholder="Enter bottom meme text" />
+      </section>
+      <button className="get-image-button" onClick={changeImage}>
+        Get a new meme image 🖼
+      </button>
+      <img src={imageUrl} className="meme-image" alt="Meme" />
+    </div>
+  );
 }
 
-export default Form
+export default Form;
