@@ -25,7 +25,11 @@ function Form() {
       <button className="get-image-button" onClick={changeImage}>
         Get a new meme image 🖼
       </button>
+      <section className="meme">
       <img src={imageUrl} className="meme-image" alt="Meme" />
+        <p className="meme-text-top">Top text</p>
+        <p className="meme-text-bottom">Bottom text</p>
+      </section>
     </div>
   );
 }
