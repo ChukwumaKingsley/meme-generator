@@ -30,6 +30,11 @@ function Form() {
         <p className="meme-text-top">Top text</p>
         <p className="meme-text-bottom">Bottom text</p>
       </section>
+      <div className="meme-text-format">
+        <button className="add-meme-text-size">-</button>
+        <span className="meme-text-format-text">Change text size</span>
+        <button className="reduce-meme-text-size">+</button>
+      </div>
     </div>
   );
 }
