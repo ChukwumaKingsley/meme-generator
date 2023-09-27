@@ -1,13 +1,13 @@
 import './App.css'
-import Navbar from './components/Navbar.jsx'
-import Form from './components/Form.jsx'
+import Header from './components/Header.jsx'
+import Meme from './components/Meme.jsx'
 
 function App() {
 
   return (
     <>
-      <Navbar />
-      <Form />
+      <Header />
+      <Meme />
     </>
   )
 }
