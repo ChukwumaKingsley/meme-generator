@@ -104,7 +104,7 @@ nav {
 .meme {
   position: relative;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: xx-large;
+  font-size: 50px;
   color: black;
   padding: 0px 0px;
 }
@@ -125,7 +125,7 @@ nav {
 
 .meme-text-bottom {
   position: absolute;
-  top: 80%;
+  bottom: 0%;
   width: 80%;
   margin-left: 10%;
 }
@@ -138,5 +138,4 @@ nav {
   align-self: right;
   text-align: right;
   margin-right: 30px;
-  row-gap: 5px;
 }
